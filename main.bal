@@ -1,9 +1,10 @@
 import ballerina/http;
 import ballerina/io;
 
-@http:ServiceConfig {
-    chunking: http:CHUNKING_ALWAYS
-}
+// @http:ServiceConfig {
+//     chunking: http:CHUNKING_ALWAYS
+// }
+// service / on new http:Listener(9090, httpVersion = http:HTTP_1_1) {
 service / on new http:Listener(9090, httpVersion = http:HTTP_1_1) {
 
     resource function post receiver(http:Request request) returns string|error {
